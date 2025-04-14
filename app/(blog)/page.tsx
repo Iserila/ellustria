@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { Suspense } from "react";
 
-import Avatar from "./avatar";
 import CoverImage from "./cover-image";
 import DateComponent from "./date";
 import MoreStories from "./more-stories";
