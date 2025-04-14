@@ -1,8 +1,5 @@
 import { DocumentTextIcon } from "@sanity/icons";
-import { format, parseISO } from "date-fns";
 import { defineField, defineType } from "sanity";
-
-import authorType from "./author";
 
 /**
  * This file is the schema definition for a post.
@@ -98,12 +95,6 @@ export default defineType({
       title: "Date",
       type: "datetime",
       initialValue: () => new Date().toISOString(),
-    }),
-    defineField({
-      name: "author",
-      title: "Author",
-      type: "reference",
-      to: [{ type: authorType.name }],
     }),
   ],
   preview: {

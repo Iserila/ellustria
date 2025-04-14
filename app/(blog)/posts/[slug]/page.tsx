@@ -5,12 +5,10 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
 
-import Avatar from "../../avatar";
 import Badge from "../../badge";
 import CoverImage from "../../cover-image";
 import DateComponent from "../../date";
 import MoreStories from "../../more-stories";
-import PortableText from "../../portable-text";
 
 import * as demo from "@/sanity/lib/demo";
 import { sanityFetch } from "@/sanity/lib/fetch";
@@ -47,7 +45,6 @@ export async function generateMetadata(
   const ogImage = resolveOpenGraphImage(post?.coverImage);
 
   return {
-    authors: post?.author?.name ? [{ name: post?.author?.name }] : [],
     title: post?.title,
     description: post?.excerpt,
     openGraph: {
@@ -78,7 +75,7 @@ export default async function PostPage({ params }: Props) {
           {post.title}
         </h1>
         <div className="md:mb-12 flex items-center gap-2 mb-4">
-          <Badge content={post.classYear} />
+          <Badge content={post.classYear || "Geen Datumn"} />
           <DateComponent dateString={post.date} />
         </div>
         <div className="mb-8 sm:mx-0 md:mb-16">
