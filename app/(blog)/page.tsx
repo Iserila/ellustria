@@ -60,7 +60,7 @@ function HeroPost({
           </h3>
           <div className="mb-4 text-lg md:mb-0 flex items-center gap-2">
             <BadgeComponent
-              content={classYear}
+              content={classYear ?? "Geen datum"}
             />
             <DateComponent dateString={date} />
           </div>
