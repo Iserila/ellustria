@@ -43,7 +43,7 @@ export default defineType({
       type: "string",
       options: {
         list: [
-          { title: "V4C", value: "V$C" },
+          { title: "V4C", value: "V4C" },
           { title: "V5B", value: "V5B" },
           { title: "V6B", value: "V6B" },
         ],
